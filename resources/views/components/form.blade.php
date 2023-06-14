@@ -6,13 +6,15 @@
 
 <form {{ $attributes }} method="{{ $_method ? $method : 'POST' }}">
 
-    
-        
+
+
     @unless ($_method)
         @method($method)
     @endunless
 
-    @csrf
+    @if ($method !== 'GET')
+        @csrf
+    @endif
 
     {{ $slot }}
 

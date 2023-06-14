@@ -1,10 +1,6 @@
 @props(['post' => null])
 
-<x-form {{ $attributes->merge([
-
-    'method' => 'post',
-
-]) }}>
+<x-form {{ $attributes }}>
     <x-form-item>
         <x-label required>{{ __('Название поста') }}</x-label>
         <x-input name="title" value="{{ $post->title ?? '' }}" autofocus />

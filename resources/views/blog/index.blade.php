@@ -10,6 +10,8 @@
 
     </x-title>
 
+    @include('blog.filter')
+
 
     @if (empty($posts))
 
@@ -31,17 +33,6 @@
 
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 @endsection
