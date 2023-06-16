@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 // Route::prefix('user')->middleware('auth', 'active')->group(function () {
     Route::prefix('user')->group(function () {
 
-    Route::redirect('/', '/user/post')->name('user');
+    Route::redirect('/', '/user/posts')->name('user');
 
 
     Route::get('posts', [PostController::class, 'index'])->name('user.posts.index');

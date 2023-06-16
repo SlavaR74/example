@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CommentControllerr;
+
 use App\Http\Controllers\BlogController;
 
 use Illuminate\Support\Facades\Route;

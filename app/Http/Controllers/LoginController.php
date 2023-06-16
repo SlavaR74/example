@@ -4,10 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Session;
+
 class LoginController extends Controller
 {
     public function index(Request $request)
     {
+
+        // if ($test = session('test')) {
+        //     action($test);
+        // }
+
+
+        // dd(session()->all());
+        // $foo = session('foo');
+
+        // dd($foo);
+
         // $ip = $request->ip();
         // $path = $request->path();
         // $url = $request->url();
@@ -23,6 +36,13 @@ class LoginController extends Controller
 
     public function store(Request $request)
     {
+
+        //authentificate user
+
+        session(['alert' => __('Добро пожаловать')]);
+        // alert ( __('Добро пожаловать'));
+
+
         // $ip = $request->ip();
         // $path = $request->path();
         // $url = $request->url();
@@ -39,11 +59,28 @@ class LoginController extends Controller
         // return response()->redirectTo('/foo');
         // return response()->redirectToRoute('user');
 
-        if (true) {
-            return redirect()->back()->withInput();
-        }
+        // $session = app()->make('session');
+        // $session = app('session');
+        // $session = session();
+        // $session = Session::get('key');
+
+        // dd($session);
+
+        // $session->put('foo', 'bar');
 
 
-        return redirect()->route('user');
+        // session()->put('foo', 'bar');
+        // session(['foo' => 'Bar']);
+
+        // session()->forget('foo');
+        // session()->flush();
+
+
+        // if (true) {
+        //     return redirect()->back()->withInput();
+        // }
+
+
+        return redirect()->route('user.posts.index');
     }
 }
