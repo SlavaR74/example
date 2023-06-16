@@ -10,13 +10,10 @@
         <x-label required>{{ __('Содержание поста') }}</x-label>
 
         <x-trix name="content" value="{{ $post->content ?? '' }}" />
-        
+
 
     </x-form-item>
 
-    <x-button type="submit">
+    {{ $slot }}
 
-        {{ __('Создать пост') }}
-
-    </x-button>
 </x-form>

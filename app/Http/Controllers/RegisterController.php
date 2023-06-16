@@ -19,9 +19,11 @@ class RegisterController extends Controller
 
         // $name = $request->input('name');
         // $email = $request->input('email');
-        // // $agreement = !! $request->input('agreement'); //Boolean
+        // $password = $request->input('password');
         // $agreement = $request->boolean('agreement'); //Boolean
-        // $avatar = $request->file('avatar');
+        // // $agreement = !! $request->input('agreement'); //Boolean
+        
+        
         
         // dd($name, $email, $agreement, $avatar);
 
@@ -31,10 +33,16 @@ class RegisterController extends Controller
 
         // dd($request->missing('name'));
 
-        if($name = $request->input('name')) {
-            $name = strtoupper($name);
+        // if($name = $request->input('name')) {
+        //     $name = strtoupper($name);
+        // }
+
+        // return view('register.store');
+
+        if (true) {
+            return redirect()->back()->withInput();
         }
 
-        return view('register.store');
+        return redirect()->route('user');
     }
 }
